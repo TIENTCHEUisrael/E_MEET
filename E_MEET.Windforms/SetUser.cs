@@ -1,7 +1,7 @@
 ﻿using E_MEET.BLL;
 using E_MEET.BO;
-using E_MEET.Windforms.OutilsWindforms;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace E_MEET.Windforms
@@ -10,6 +10,7 @@ namespace E_MEET.Windforms
     {
         private Utilisateur Oldutilisateur;
         private UtilisateurManager Utilisateurmanager;
+        private ClientManager clientManager;
         //private Loading loading;
         private string Personne;
         public SetUser(Utilisateur us)
@@ -18,9 +19,10 @@ namespace E_MEET.Windforms
             Oldutilisateur = us;
             //loading = new Loading();
             Utilisateurmanager = new UtilisateurManager();
+            clientManager = new ClientManager();
         }
 
-        private void SetUser_Load(object sender, System.EventArgs e)
+        private void SetUser_Load(object sender, EventArgs e)
         {
             Old();
         }
@@ -38,7 +40,7 @@ namespace E_MEET.Windforms
             Guna2CirclePictureBox1.ImageLocation = Oldutilisateur.Photo;
         }
 
-        private void timer1_Tick(object sender, System.EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
            /* Panel1.Width += 3;
             if(Panel1.Width>=225)
@@ -48,7 +50,7 @@ namespace E_MEET.Windforms
             }*/
         }
 
-        private void BtnCancel_Click(object sender, System.EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             Clear();
         }
@@ -87,7 +89,9 @@ namespace E_MEET.Windforms
                     }
                     else
                     {
+                        var clts = Oldutilisateur.GetClient();                        
                         Utilisateurmanager.EditUser(Oldutilisateur, newUser);
+                        modificationClientUser(clts);
                     }
                 }
                 catch(Exception ex)
@@ -114,6 +118,14 @@ namespace E_MEET.Windforms
                 );
             }
            
+        }
+
+        private void modificationClientUser(List<Client> us)
+        {
+            foreach(var c in us)
+            {
+                Oldutilisateur.AddClient(c);
+            }
         }
 
         private void Guna2CirclePictureBox1_Click(object sender, EventArgs e)

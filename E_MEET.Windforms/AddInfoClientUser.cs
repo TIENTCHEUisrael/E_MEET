@@ -79,5 +79,14 @@ namespace E_MEET.Windforms
         {
             Clear();
         }
+
+        private void PictureClient_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "images (*.jpg ;*.jpeg; *.png; *.gif; *.tiff)|*.jpg;*.jpeg;*.gif;*.tiff;*.png";
+            ofd.ShowDialog();
+            PictureClient.ImageLocation = ofd.FileName;
+
+        }
     }
 }

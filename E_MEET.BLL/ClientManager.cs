@@ -40,7 +40,19 @@ namespace E_MEET.BLL
                     return c;
             return null;
         }
-
+        /// <summary>
+        /// Authentification du client avec son nom
+        /// </summary>
+        /// <param name="Nom"></param>
+        /// <returns></returns>
+        public Client Authenticate(string Nom)
+        {
+            var clt = Clientrepository.FindByNom(Nom);
+            foreach (var c in clt)
+                if (c.Nom == Nom)
+                    return c;
+            return null;
+        }
         /// <summary>
         /// Add the client
         /// </summary>

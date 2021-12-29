@@ -253,6 +253,7 @@ namespace E_MEET.Windforms
             // 
             // PictureClient
             // 
+            this.PictureClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureClient.ImageRotate = 0F;
             this.PictureClient.Location = new System.Drawing.Point(428, 132);
             this.PictureClient.Name = "PictureClient";
@@ -262,6 +263,7 @@ namespace E_MEET.Windforms
             this.PictureClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureClient.TabIndex = 50;
             this.PictureClient.TabStop = false;
+            this.PictureClient.Click += new System.EventHandler(this.PictureClient_Click);
             // 
             // RdHomme
             // 
@@ -395,7 +397,7 @@ namespace E_MEET.Windforms
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddInfoClientUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddInfoClientUser";

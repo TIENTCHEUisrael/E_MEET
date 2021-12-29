@@ -91,6 +91,12 @@
     <Compile Include="Authenticate.Designer.cs">
       <DependentUpon>Authenticate.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoRdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoRdv.Designer.cs">
+      <DependentUpon>InfoRdv.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     <EmbeddedResource Include="Authenticate.resx">
       <DependentUpon>Authenticate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InfoRdv.resx">
+      <DependentUpon>InfoRdv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +368,8 @@
     <None Include="Resources\icons8_Male_User_32.png" />
     <None Include="Resources\icons8_appointment_scheduling_32.png" />
     <None Include="Resources\icons8_refresh_32.png" />
+    <None Include="Resources\icons8_view_details_32.png" />
+    <None Include="Resources\icons8_edit_32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -82,8 +82,15 @@ namespace E_MEET.Windforms
 
         private void MainApp_Load(object sender, EventArgs e)
         {
+            try
+            {
             Label2.Text = Program.CurrentUser.Nom;
             PictureUser.ImageLocation = Program.CurrentUser.Photo;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

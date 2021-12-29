@@ -159,10 +159,11 @@ namespace E_MEET.Windforms.User_sControl
             // PictureBox2
             // 
             this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBox2.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
             this.PictureBox2.Location = new System.Drawing.Point(3, 3);
             this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(47, 38);
+            this.PictureBox2.Size = new System.Drawing.Size(48, 54);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox2.TabIndex = 7;
             this.PictureBox2.TabStop = false;

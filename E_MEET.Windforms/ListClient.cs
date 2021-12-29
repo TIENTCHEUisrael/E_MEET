@@ -25,6 +25,7 @@ namespace E_MEET.Windforms
             ListBox1.Items.Clear();
             foreach (var p in client)
             {
+                ListBox1.Tag = p;
                 ListBox1.Items.Add(p.Nom);
             }
         }

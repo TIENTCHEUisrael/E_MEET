@@ -93,6 +93,16 @@ namespace E_MEET.Windforms.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_edit_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Male_User_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Male_User_32", resourceCulture);
@@ -106,6 +116,16 @@ namespace E_MEET.Windforms.Properties {
         internal static System.Drawing.Bitmap icons8_refresh_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_refresh_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_details_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_view_details_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

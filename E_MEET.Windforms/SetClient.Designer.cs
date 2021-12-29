@@ -96,7 +96,7 @@ namespace E_MEET.Windforms
             this.Mybutton1.Name = "Mybutton1";
             this.Mybutton1.Size = new System.Drawing.Size(150, 48);
             this.Mybutton1.TabIndex = 40;
-            this.Mybutton1.Text = "Add";
+            this.Mybutton1.Text = "Save";
             this.Mybutton1.TextColor = System.Drawing.Color.White;
             this.Mybutton1.UseVisualStyleBackColor = false;
             this.Mybutton1.Click += new System.EventHandler(this.Mybutton1_Click_1);

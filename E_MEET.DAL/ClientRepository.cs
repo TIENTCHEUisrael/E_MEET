@@ -23,5 +23,15 @@ namespace E_MEET.DAL
             }
             return new List<Client>(list);
         }
+        public List<Client> FindByNom(string nom)
+        {
+            List<Client> list = new List<Client>();
+            foreach (var data in Datas)
+            {
+                if (data.Nom.ToLower().Contains(nom.ToLower()))
+                    list.Add(data);
+            }
+            return new List<Client>(list);
+        }
     }
 }

@@ -59,6 +59,8 @@ namespace E_MEET.Windforms
             this.RdQuoti = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TxtId = new System.Windows.Forms.TextBox();
             this.LblDuree = new System.Windows.Forms.Label();
             this.TrackBar1 = new System.Windows.Forms.TrackBar();
             this.CmdFin = new System.Windows.Forms.ComboBox();
@@ -70,8 +72,6 @@ namespace E_MEET.Windforms
             this.label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.TxtMotif = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.PanelPeriodiciter.SuspendLayout();
@@ -193,6 +193,7 @@ namespace E_MEET.Windforms
             this.RdFinle.UncheckedState.BorderThickness = 2;
             this.RdFinle.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdFinle.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdFinle.CheckedChanged += new System.EventHandler(this.RdFinle_CheckedChanged);
             // 
             // RdOccurences
             // 
@@ -212,6 +213,7 @@ namespace E_MEET.Windforms
             this.RdOccurences.UncheckedState.BorderThickness = 2;
             this.RdOccurences.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdOccurences.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdOccurences.CheckedChanged += new System.EventHandler(this.RdOccurences_CheckedChanged);
             // 
             // RdPasdefin
             // 
@@ -231,6 +233,7 @@ namespace E_MEET.Windforms
             this.RdPasdefin.UncheckedState.BorderThickness = 2;
             this.RdPasdefin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdPasdefin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdPasdefin.CheckedChanged += new System.EventHandler(this.RdPasdefin_CheckedChanged);
             // 
             // DateDebut
             // 
@@ -439,6 +442,7 @@ namespace E_MEET.Windforms
             this.Rdautre.UncheckedState.BorderThickness = 2;
             this.Rdautre.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Rdautre.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Rdautre.CheckedChanged += new System.EventHandler(this.Rdautre_CheckedChanged);
             // 
             // label7
             // 
@@ -480,6 +484,7 @@ namespace E_MEET.Windforms
             this.Rddfinition.UncheckedState.BorderThickness = 2;
             this.Rddfinition.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Rddfinition.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Rddfinition.CheckedChanged += new System.EventHandler(this.Rddfinition_CheckedChanged);
             // 
             // RdAnnu
             // 
@@ -499,6 +504,7 @@ namespace E_MEET.Windforms
             this.RdAnnu.UncheckedState.BorderThickness = 2;
             this.RdAnnu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdAnnu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdAnnu.CheckedChanged += new System.EventHandler(this.RdAnnu_CheckedChanged);
             // 
             // RdMensu
             // 
@@ -518,6 +524,7 @@ namespace E_MEET.Windforms
             this.RdMensu.UncheckedState.BorderThickness = 2;
             this.RdMensu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdMensu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdMensu.CheckedChanged += new System.EventHandler(this.RdMensu_CheckedChanged);
             // 
             // RdHebdo
             // 
@@ -537,6 +544,7 @@ namespace E_MEET.Windforms
             this.RdHebdo.UncheckedState.BorderThickness = 2;
             this.RdHebdo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdHebdo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdHebdo.CheckedChanged += new System.EventHandler(this.RdHebdo_CheckedChanged);
             // 
             // RdQuoti
             // 
@@ -556,6 +564,7 @@ namespace E_MEET.Windforms
             this.RdQuoti.UncheckedState.BorderThickness = 2;
             this.RdQuoti.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdQuoti.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdQuoti.CheckedChanged += new System.EventHandler(this.RdQuoti_CheckedChanged);
             // 
             // panel1
             // 
@@ -569,7 +578,7 @@ namespace E_MEET.Windforms
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TxtId);
             this.groupBox1.Controls.Add(this.LblDuree);
             this.groupBox1.Controls.Add(this.TrackBar1);
             this.groupBox1.Controls.Add(this.CmdFin);
@@ -585,6 +594,24 @@ namespace E_MEET.Windforms
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heure de RendezVous";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(380, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 18);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Identifiant: ";
+            // 
+            // TxtId
+            // 
+            this.TxtId.Location = new System.Drawing.Point(483, 21);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(110, 22);
+            this.TxtId.TabIndex = 22;
             // 
             // LblDuree
             // 
@@ -609,6 +636,7 @@ namespace E_MEET.Windforms
             this.TrackBar1.TabIndex = 25;
             this.TrackBar1.TickFrequency = 30;
             this.TrackBar1.Value = 30;
+            this.TrackBar1.Scroll += new System.EventHandler(this.TrackBar1_Scroll);
             // 
             // CmdFin
             // 
@@ -730,24 +758,6 @@ namespace E_MEET.Windforms
             this.TxtMotif.Size = new System.Drawing.Size(537, 59);
             this.TxtMotif.TabIndex = 21;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(483, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 22);
-            this.textBox1.TabIndex = 22;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(380, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 18);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Identifiant: ";
-            // 
             // SetRdv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -823,6 +833,6 @@ namespace E_MEET.Windforms
         private System.Windows.Forms.Label LblDuree;
         private System.Windows.Forms.TrackBar TrackBar1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtId;
     }
 }
