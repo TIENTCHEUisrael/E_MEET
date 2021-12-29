@@ -1,4 +1,6 @@
-﻿using System;
+﻿using E_MEET.BO;
+using E_MEET.Windforms.OutilsWindforms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,22 @@ namespace E_MEET.Windforms
 {
     public partial class SetRdv : Form
     {
+        private RendezVous Rendezvous;
+        
         public SetRdv()
         {
             InitializeComponent();
+            Rendezvous = new RendezVous();
+        }
+
+        private void SetRdv_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Mybutton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

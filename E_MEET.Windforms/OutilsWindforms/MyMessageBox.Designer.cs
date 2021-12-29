@@ -41,19 +41,19 @@ namespace E_MEET.Windforms.OutilsWindforms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 72);
+            this.panel1.Size = new System.Drawing.Size(440, 72);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 22);
+            this.label1.Location = new System.Drawing.Point(84, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(272, 32);
             this.label1.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace E_MEET.Windforms.OutilsWindforms
             // 
             // Panel2
             // 
-            this.Panel2.Location = new System.Drawing.Point(12, 219);
+            this.Panel2.Location = new System.Drawing.Point(61, 169);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(319, 10);
             this.Panel2.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace E_MEET.Windforms.OutilsWindforms
             this.ButtonNon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonNon.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonNon.ForeColor = System.Drawing.Color.White;
-            this.ButtonNon.Location = new System.Drawing.Point(181, 142);
+            this.ButtonNon.Location = new System.Drawing.Point(237, 101);
             this.ButtonNon.Name = "ButtonNon";
             this.ButtonNon.Size = new System.Drawing.Size(150, 62);
             this.ButtonNon.TabIndex = 2;
@@ -103,7 +103,7 @@ namespace E_MEET.Windforms.OutilsWindforms
             this.ButtonOui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonOui.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonOui.ForeColor = System.Drawing.Color.White;
-            this.ButtonOui.Location = new System.Drawing.Point(12, 142);
+            this.ButtonOui.Location = new System.Drawing.Point(53, 101);
             this.ButtonOui.Name = "ButtonOui";
             this.ButtonOui.Size = new System.Drawing.Size(150, 62);
             this.ButtonOui.TabIndex = 1;
@@ -116,8 +116,8 @@ namespace E_MEET.Windforms.OutilsWindforms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(367, 241);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(440, 195);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.ButtonNon);
             this.Controls.Add(this.ButtonOui);

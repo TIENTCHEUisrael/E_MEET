@@ -39,7 +39,7 @@ namespace E_MEET.Windforms
 
         private void ListAppoint_Click(object sender, EventArgs e)
         {
-            E_ListAppoint ul = new E_ListAppoint();
+            E_ListAppoint ul = new E_ListAppoint(Program.CurrentUser);
             AddUserControl(ul);
         }
 
@@ -84,6 +84,17 @@ namespace E_MEET.Windforms
         {
             Label2.Text = Program.CurrentUser.Nom;
             PictureUser.ImageLocation = Program.CurrentUser.Photo;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            E_User eu = new E_User();
+            AddUserControl(eu);
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            MainApp_Load(sender, e);
         }
     }
 }

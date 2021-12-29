@@ -18,7 +18,7 @@ namespace E_MEET.Windforms.User_sControl
         }
         private void Guna2Button1_Click(object sender, EventArgs e)
         {
-            var form = new SetUser();
+            var form = new SetUser(Program.CurrentUser);
             form.ShowDialog();
         }
         private void E_Information_Load(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace E_MEET.Windforms.User_sControl
             Label5.Text = Program.CurrentUser.Sexe;
             Label6.Text = Program.CurrentUser.Profession;
             Label7.Text = Program.CurrentUser.Localisation;
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            E_Information_Load(sender,e);
         }
     }
 }

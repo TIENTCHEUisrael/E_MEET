@@ -36,6 +36,7 @@ namespace E_MEET.Windforms
             this.PictureUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.ExitButton = new Guna.UI2.WinForms.Guna2Button();
             this.Information = new Guna.UI2.WinForms.Guna2Button();
             this.AddAppoint = new Guna.UI2.WinForms.Guna2Button();
@@ -43,15 +44,20 @@ namespace E_MEET.Windforms
             this.ListAppoint = new Guna.UI2.WinForms.Guna2Button();
             this.Home = new Guna.UI2.WinForms.Guna2Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Navy;
+            this.Panel1.Controls.Add(this.panel3);
             this.Panel1.Controls.Add(this.Label4);
             this.Panel1.Controls.Add(this.Label3);
             this.Panel1.Controls.Add(this.Label2);
@@ -92,7 +98,7 @@ namespace E_MEET.Windforms
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.White;
-            this.Label2.Location = new System.Drawing.Point(794, 21);
+            this.Label2.Location = new System.Drawing.Point(759, 24);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(25, 23);
             this.Label2.TabIndex = 3;
@@ -123,6 +129,7 @@ namespace E_MEET.Windforms
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.ExitButton);
             this.panel2.Controls.Add(this.Information);
             this.panel2.Controls.Add(this.AddAppoint);
@@ -134,6 +141,31 @@ namespace E_MEET.Windforms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(996, 57);
             this.panel2.TabIndex = 1;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.Blue;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(769, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(139, 54);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Ask Appoint";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // ExitButton
             // 
@@ -152,10 +184,10 @@ namespace E_MEET.Windforms
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
             this.ExitButton.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.ExitButton.HoverState.Parent = this.ExitButton;
-            this.ExitButton.Location = new System.Drawing.Point(825, 0);
+            this.ExitButton.Location = new System.Drawing.Point(914, 0);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.ShadowDecoration.Parent = this.ExitButton;
-            this.ExitButton.Size = new System.Drawing.Size(159, 54);
+            this.ExitButton.Size = new System.Drawing.Size(70, 54);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Exit";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -177,7 +209,7 @@ namespace E_MEET.Windforms
             this.Information.ForeColor = System.Drawing.Color.Black;
             this.Information.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.Information.HoverState.Parent = this.Information;
-            this.Information.Location = new System.Drawing.Point(660, 0);
+            this.Information.Location = new System.Drawing.Point(604, 0);
             this.Information.Name = "Information";
             this.Information.ShadowDecoration.Parent = this.Information;
             this.Information.Size = new System.Drawing.Size(159, 54);
@@ -202,10 +234,10 @@ namespace E_MEET.Windforms
             this.AddAppoint.ForeColor = System.Drawing.Color.Black;
             this.AddAppoint.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.AddAppoint.HoverState.Parent = this.AddAppoint;
-            this.AddAppoint.Location = new System.Drawing.Point(495, 0);
+            this.AddAppoint.Location = new System.Drawing.Point(453, 0);
             this.AddAppoint.Name = "AddAppoint";
             this.AddAppoint.ShadowDecoration.Parent = this.AddAppoint;
-            this.AddAppoint.Size = new System.Drawing.Size(159, 54);
+            this.AddAppoint.Size = new System.Drawing.Size(145, 54);
             this.AddAppoint.TabIndex = 1;
             this.AddAppoint.Text = "Add Appoint";
             this.AddAppoint.Click += new System.EventHandler(this.AddAppoint_Click);
@@ -227,10 +259,10 @@ namespace E_MEET.Windforms
             this.AddClient.ForeColor = System.Drawing.Color.Black;
             this.AddClient.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.AddClient.HoverState.Parent = this.AddClient;
-            this.AddClient.Location = new System.Drawing.Point(330, 0);
+            this.AddClient.Location = new System.Drawing.Point(302, 0);
             this.AddClient.Name = "AddClient";
             this.AddClient.ShadowDecoration.Parent = this.AddClient;
-            this.AddClient.Size = new System.Drawing.Size(159, 54);
+            this.AddClient.Size = new System.Drawing.Size(145, 54);
             this.AddClient.TabIndex = 0;
             this.AddClient.Text = "Add Client";
             this.AddClient.Click += new System.EventHandler(this.AddClient_Click);
@@ -252,10 +284,10 @@ namespace E_MEET.Windforms
             this.ListAppoint.ForeColor = System.Drawing.Color.Black;
             this.ListAppoint.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.ListAppoint.HoverState.Parent = this.ListAppoint;
-            this.ListAppoint.Location = new System.Drawing.Point(165, 0);
+            this.ListAppoint.Location = new System.Drawing.Point(151, 0);
             this.ListAppoint.Name = "ListAppoint";
             this.ListAppoint.ShadowDecoration.Parent = this.ListAppoint;
-            this.ListAppoint.Size = new System.Drawing.Size(159, 54);
+            this.ListAppoint.Size = new System.Drawing.Size(145, 54);
             this.ListAppoint.TabIndex = 0;
             this.ListAppoint.Text = "List Appoint ";
             this.ListAppoint.Click += new System.EventHandler(this.ListAppoint_Click);
@@ -282,7 +314,7 @@ namespace E_MEET.Windforms
             this.Home.Location = new System.Drawing.Point(0, 0);
             this.Home.Name = "Home";
             this.Home.ShadowDecoration.Parent = this.Home;
-            this.Home.Size = new System.Drawing.Size(159, 54);
+            this.Home.Size = new System.Drawing.Size(145, 54);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             this.Home.Click += new System.EventHandler(this.Home_Click);
@@ -294,6 +326,28 @@ namespace E_MEET.Windforms
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(996, 451);
             this.PanelContainer.TabIndex = 2;
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PictureBox2.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
+            this.PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(43, 32);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 6;
+            this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.PictureBox2);
+            this.panel3.Location = new System.Drawing.Point(207, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(43, 32);
+            this.panel3.TabIndex = 0;
             // 
             // MainApp
             // 
@@ -314,6 +368,8 @@ namespace E_MEET.Windforms
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -334,5 +390,8 @@ namespace E_MEET.Windforms
         private Guna.UI2.WinForms.Guna2CirclePictureBox PictureUser;
         private System.Windows.Forms.Label Label4;
         private System.Windows.Forms.Label Label3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox PictureBox2;
     }
 }

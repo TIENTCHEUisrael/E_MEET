@@ -36,7 +36,7 @@ namespace E_MEET.Windforms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CmdFin = new System.Windows.Forms.ComboBox();
             this.CmdDebut = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.LblDuree = new System.Windows.Forms.Label();
             this.TrackBar1 = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@ namespace E_MEET.Windforms
             this.ComboBox4 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.Rdautre = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,11 +70,12 @@ namespace E_MEET.Windforms
             this.label8 = new System.Windows.Forms.Label();
             this.Mybutton1 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Mybutton2 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
-            this.Mybutton3 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Label13 = new System.Windows.Forms.Label();
             this.TxtMotif = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBar1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -117,10 +118,11 @@ namespace E_MEET.Windforms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Panel2);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.TxtId);
             this.groupBox1.Controls.Add(this.CmdFin);
             this.groupBox1.Controls.Add(this.CmdDebut);
-            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.LblDuree);
             this.groupBox1.Controls.Add(this.TrackBar1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -182,26 +184,30 @@ namespace E_MEET.Windforms
             this.CmdDebut.Size = new System.Drawing.Size(184, 24);
             this.CmdDebut.TabIndex = 23;
             // 
-            // label12
+            // LblDuree
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(434, 125);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 18);
-            this.label12.TabIndex = 8;
-            this.label12.Text = ".  .  .";
+            this.LblDuree.AutoSize = true;
+            this.LblDuree.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDuree.ForeColor = System.Drawing.Color.Gray;
+            this.LblDuree.Location = new System.Drawing.Point(454, 125);
+            this.LblDuree.Name = "LblDuree";
+            this.LblDuree.Size = new System.Drawing.Size(36, 18);
+            this.LblDuree.TabIndex = 8;
+            this.LblDuree.Text = ".  .  .";
             // 
             // TrackBar1
             // 
+            this.TrackBar1.LargeChange = 30;
             this.TrackBar1.Location = new System.Drawing.Point(88, 101);
             this.TrackBar1.Maximum = 360;
             this.TrackBar1.Minimum = 30;
             this.TrackBar1.Name = "TrackBar1";
-            this.TrackBar1.Size = new System.Drawing.Size(301, 45);
+            this.TrackBar1.Size = new System.Drawing.Size(360, 45);
+            this.TrackBar1.SmallChange = 30;
             this.TrackBar1.TabIndex = 7;
+            this.TrackBar1.TickFrequency = 30;
             this.TrackBar1.Value = 30;
+            this.TrackBar1.Scroll += new System.EventHandler(this.TrackBar1_Scroll);
             // 
             // label5
             // 
@@ -260,8 +266,8 @@ namespace E_MEET.Windforms
             this.PanelPeriodiciter.Controls.Add(this.ComboBox4);
             this.PanelPeriodiciter.Controls.Add(this.label11);
             this.PanelPeriodiciter.Controls.Add(this.label10);
-            this.PanelPeriodiciter.Controls.Add(this.comboBox2);
-            this.PanelPeriodiciter.Controls.Add(this.comboBox1);
+            this.PanelPeriodiciter.Controls.Add(this.ComboBox2);
+            this.PanelPeriodiciter.Controls.Add(this.ComboBox1);
             this.PanelPeriodiciter.Controls.Add(this.Rdautre);
             this.PanelPeriodiciter.Controls.Add(this.label7);
             this.PanelPeriodiciter.Controls.Add(this.label6);
@@ -355,25 +361,25 @@ namespace E_MEET.Windforms
             this.label10.TabIndex = 20;
             this.label10.Text = "tous les ";
             // 
-            // comboBox2
+            // ComboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.ComboBox2.FormattingEnabled = true;
+            this.ComboBox2.Items.AddRange(new object[] {
             "Lundi",
             "Mardi",
             "Mercredi",
             "Jeudi",
             "Vendredi",
             "Samedi"});
-            this.comboBox2.Location = new System.Drawing.Point(174, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 24);
-            this.comboBox2.TabIndex = 19;
+            this.ComboBox2.Location = new System.Drawing.Point(174, 81);
+            this.ComboBox2.Name = "ComboBox2";
+            this.ComboBox2.Size = new System.Drawing.Size(100, 24);
+            this.ComboBox2.TabIndex = 19;
             // 
-            // comboBox1
+            // ComboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ComboBox1.FormattingEnabled = true;
+            this.ComboBox1.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -401,10 +407,10 @@ namespace E_MEET.Windforms
             "25",
             "26",
             "27"});
-            this.comboBox1.Location = new System.Drawing.Point(68, 81);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 24);
-            this.comboBox1.TabIndex = 18;
+            this.ComboBox1.Location = new System.Drawing.Point(68, 81);
+            this.ComboBox1.Name = "ComboBox1";
+            this.ComboBox1.Size = new System.Drawing.Size(100, 24);
+            this.ComboBox1.TabIndex = 18;
             // 
             // Rdautre
             // 
@@ -424,6 +430,7 @@ namespace E_MEET.Windforms
             this.Rdautre.UncheckedState.BorderThickness = 2;
             this.Rdautre.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Rdautre.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Rdautre.CheckedChanged += new System.EventHandler(this.Rdautre_CheckedChanged);
             // 
             // label7
             // 
@@ -465,6 +472,7 @@ namespace E_MEET.Windforms
             this.Rddfinition.UncheckedState.BorderThickness = 2;
             this.Rddfinition.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Rddfinition.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Rddfinition.CheckedChanged += new System.EventHandler(this.Rddfinition_CheckedChanged);
             // 
             // RdAnnu
             // 
@@ -484,6 +492,7 @@ namespace E_MEET.Windforms
             this.RdAnnu.UncheckedState.BorderThickness = 2;
             this.RdAnnu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdAnnu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdAnnu.CheckedChanged += new System.EventHandler(this.RdAnnu_CheckedChanged);
             // 
             // RdMensu
             // 
@@ -503,6 +512,7 @@ namespace E_MEET.Windforms
             this.RdMensu.UncheckedState.BorderThickness = 2;
             this.RdMensu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdMensu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdMensu.CheckedChanged += new System.EventHandler(this.RdMensu_CheckedChanged);
             // 
             // RdHebdo
             // 
@@ -522,6 +532,7 @@ namespace E_MEET.Windforms
             this.RdHebdo.UncheckedState.BorderThickness = 2;
             this.RdHebdo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdHebdo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdHebdo.CheckedChanged += new System.EventHandler(this.RdHebdo_CheckedChanged);
             // 
             // RdQuoti
             // 
@@ -541,6 +552,7 @@ namespace E_MEET.Windforms
             this.RdQuoti.UncheckedState.BorderThickness = 2;
             this.RdQuoti.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdQuoti.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdQuoti.CheckedChanged += new System.EventHandler(this.RdQuoti_CheckedChanged);
             // 
             // panel1
             // 
@@ -569,6 +581,7 @@ namespace E_MEET.Windforms
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Plage";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // ComboBox3
             // 
@@ -626,6 +639,7 @@ namespace E_MEET.Windforms
             this.RdFinle.UncheckedState.BorderThickness = 2;
             this.RdFinle.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdFinle.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdFinle.CheckedChanged += new System.EventHandler(this.RdFinle_CheckedChanged);
             // 
             // RdOccurences
             // 
@@ -645,6 +659,7 @@ namespace E_MEET.Windforms
             this.RdOccurences.UncheckedState.BorderThickness = 2;
             this.RdOccurences.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdOccurences.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdOccurences.CheckedChanged += new System.EventHandler(this.RdOccurences_CheckedChanged);
             // 
             // RdPasdefin
             // 
@@ -664,6 +679,7 @@ namespace E_MEET.Windforms
             this.RdPasdefin.UncheckedState.BorderThickness = 2;
             this.RdPasdefin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RdPasdefin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdPasdefin.CheckedChanged += new System.EventHandler(this.RdPasdefin_CheckedChanged);
             // 
             // DateDebut
             // 
@@ -695,7 +711,7 @@ namespace E_MEET.Windforms
             this.Mybutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mybutton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton1.ForeColor = System.Drawing.Color.White;
-            this.Mybutton1.Location = new System.Drawing.Point(75, 601);
+            this.Mybutton1.Location = new System.Drawing.Point(100, 601);
             this.Mybutton1.Name = "Mybutton1";
             this.Mybutton1.Size = new System.Drawing.Size(150, 40);
             this.Mybutton1.TabIndex = 8;
@@ -715,32 +731,14 @@ namespace E_MEET.Windforms
             this.Mybutton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mybutton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton2.ForeColor = System.Drawing.Color.White;
-            this.Mybutton2.Location = new System.Drawing.Point(234, 601);
+            this.Mybutton2.Location = new System.Drawing.Point(370, 601);
             this.Mybutton2.Name = "Mybutton2";
             this.Mybutton2.Size = new System.Drawing.Size(150, 40);
             this.Mybutton2.TabIndex = 9;
             this.Mybutton2.Text = "Cancel";
             this.Mybutton2.TextColor = System.Drawing.Color.White;
             this.Mybutton2.UseVisualStyleBackColor = false;
-            // 
-            // Mybutton3
-            // 
-            this.Mybutton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Mybutton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Mybutton3.Bordercolor = System.Drawing.Color.DodgerBlue;
-            this.Mybutton3.BorderRadius = 40;
-            this.Mybutton3.BorderSize = 0;
-            this.Mybutton3.FlatAppearance.BorderSize = 0;
-            this.Mybutton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mybutton3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mybutton3.ForeColor = System.Drawing.Color.White;
-            this.Mybutton3.Location = new System.Drawing.Point(390, 601);
-            this.Mybutton3.Name = "Mybutton3";
-            this.Mybutton3.Size = new System.Drawing.Size(150, 40);
-            this.Mybutton3.TabIndex = 10;
-            this.Mybutton3.Text = "Clean";
-            this.Mybutton3.TextColor = System.Drawing.Color.White;
-            this.Mybutton3.UseVisualStyleBackColor = false;
+            this.Mybutton2.Click += new System.EventHandler(this.Mybutton2_Click);
             // 
             // Label13
             // 
@@ -750,10 +748,10 @@ namespace E_MEET.Windforms
             this.Label13.Size = new System.Drawing.Size(36, 13);
             this.Label13.TabIndex = 11;
             this.Label13.Text = "Motif :";
-            this.Label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // TxtMotif
             // 
+            this.TxtMotif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMotif.Location = new System.Drawing.Point(51, 536);
             this.TxtMotif.Multiline = true;
             this.TxtMotif.Name = "TxtMotif";
@@ -766,19 +764,37 @@ namespace E_MEET.Windforms
             // 
             // Panel2
             // 
-            this.Panel2.Location = new System.Drawing.Point(347, 21);
+            this.Panel2.Location = new System.Drawing.Point(393, 45);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(221, 10);
             this.Panel2.TabIndex = 25;
+            // 
+            // TxtId
+            // 
+            this.TxtId.Location = new System.Drawing.Point(493, 21);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(103, 22);
+            this.TxtId.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(395, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 18);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Identifiant : ";
             // 
             // NewRdv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 653);
+            this.Controls.Add(this.Panel2);
             this.Controls.Add(this.TxtMotif);
             this.Controls.Add(this.Label13);
-            this.Controls.Add(this.Mybutton3);
             this.Controls.Add(this.Mybutton2);
             this.Controls.Add(this.Mybutton1);
             this.Controls.Add(this.groupBox3);
@@ -833,17 +849,16 @@ namespace E_MEET.Windforms
         private OutilsWindforms.Mybutton Mybutton2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComboBox2;
+        private System.Windows.Forms.ComboBox ComboBox1;
         private Guna.UI2.WinForms.Guna2RadioButton Rdautre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2RadioButton Rddfinition;
         private System.Windows.Forms.Label label9;
-        private OutilsWindforms.Mybutton Mybutton3;
         private System.Windows.Forms.ComboBox CmdFin;
         private System.Windows.Forms.ComboBox CmdDebut;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label LblDuree;
         private System.Windows.Forms.TrackBar TrackBar1;
         private System.Windows.Forms.ComboBox ComboBox6;
         private System.Windows.Forms.ComboBox ComboBox5;
@@ -853,5 +868,7 @@ namespace E_MEET.Windforms
         private System.Windows.Forms.TextBox TxtMotif;
         private System.Windows.Forms.Panel Panel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox TxtId;
     }
 }

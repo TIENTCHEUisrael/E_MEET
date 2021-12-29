@@ -64,15 +64,10 @@ namespace E_MEET.Windforms
                 try
                 {
                     var user = new Utilisateur(TxtEmail.Text, TxtPassword.Text, PictureBox.ImageLocation, TxtName.Text, TxtFullname.Text, int.Parse(TxtContact.Text), TxtProfession.Text, TxtLocalisation.Text, Personne);
-                    if (EditUser == null)
-                    {
-                        userManager.AddUser(user);
-                    }
-                    else
-                    {
-                        userManager.EditUser(EditUser, user);
-                    }
-                    loading.ShowDialog();
+                   
+                    Program.CurrentUser = user;
+                    userManager.AddUser(user);                   
+                    //loading.ShowDialog();
                     MessageBox.Show($"Save done!", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                     Clear();
                     var form = new Authenticate();

@@ -205,6 +205,7 @@ namespace E_MEET.Windforms
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // Panel2
             // 
@@ -232,6 +233,7 @@ namespace E_MEET.Windforms
             this.Name = "Authenticate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authenticate";
+            this.Load += new System.EventHandler(this.Authenticate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

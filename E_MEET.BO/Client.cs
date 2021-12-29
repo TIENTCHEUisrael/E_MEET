@@ -88,12 +88,12 @@ namespace E_MEET.BO
         /// Liste de RendezVous
         /// </summary>
         /// <returns></returns>
-        /*public List<RendezVous> GetRDv()
+        public List<RendezVous> GetRDv()
         {
             var list = new List<RendezVous>();
             foreach (var c in RendezVous)
                 list.Add(new RendezVous(c));
             return list;
-        }*/
+        }
     }
 }

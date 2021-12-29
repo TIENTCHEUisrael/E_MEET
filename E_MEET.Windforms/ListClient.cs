@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_MEET.BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,24 @@ namespace E_MEET.Windforms
 {
     public partial class ListClient : Form
     {
-        public ListClient()
+        private readonly Utilisateur User;
+        public ListClient(Utilisateur us)
         {
             InitializeComponent();
+            User = us;
         }
-
+        private  void lloadListBox(Utilisateur user)
+        {
+            var client = user.GetClient();           
+            ListBox1.Items.Clear();
+            foreach (var p in client)
+            {
+                ListBox1.Items.Add(p.Nom);
+            }
+        }
         private void ListClient_Load(object sender, EventArgs e)
         {
-
+            lloadListBox(User);
         }
 
         private void Mybutton1_Click(object sender, EventArgs e)

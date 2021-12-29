@@ -29,67 +29,19 @@ namespace E_MEET.Windforms.User_sControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListView1 = new System.Windows.Forms.ListView();
-            this.Nom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Prenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Contact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Sexe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Localisation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mybutton3 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Mybutton2 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Mybutton1 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
+            this.ListView1 = new System.Windows.Forms.ListView();
+            this.Nom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Prenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Contact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Sexe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Loalisation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ListView1
-            // 
-            this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nom,
-            this.Prenom,
-            this.Email,
-            this.Contact,
-            this.Sexe,
-            this.Localisation});
-            this.ListView1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListView1.GridLines = true;
-            this.ListView1.HideSelection = false;
-            this.ListView1.Location = new System.Drawing.Point(35, 76);
-            this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(769, 343);
-            this.ListView1.TabIndex = 0;
-            this.ListView1.UseCompatibleStateImageBehavior = false;
-            this.ListView1.View = System.Windows.Forms.View.Details;
-            this.ListView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
-            // 
-            // Nom
-            // 
-            this.Nom.Text = "Nom";
-            this.Nom.Width = 113;
-            // 
-            // Prenom
-            // 
-            this.Prenom.Text = "Prenom";
-            this.Prenom.Width = 116;
-            // 
-            // Email
-            // 
-            this.Email.Text = "Email";
-            this.Email.Width = 133;
-            // 
-            // Contact
-            // 
-            this.Contact.Text = "Contact";
-            this.Contact.Width = 118;
-            // 
-            // Sexe
-            // 
-            this.Sexe.Text = "Sexe";
-            this.Sexe.Width = 79;
-            // 
-            // Localisation
-            // 
-            this.Localisation.Text = "Localisation";
-            this.Localisation.Width = 213;
             // 
             // Mybutton3
             // 
@@ -129,6 +81,7 @@ namespace E_MEET.Windforms.User_sControl
             this.Mybutton2.Text = "Delete";
             this.Mybutton2.TextColor = System.Drawing.Color.White;
             this.Mybutton2.UseVisualStyleBackColor = false;
+            this.Mybutton2.Click += new System.EventHandler(this.Mybutton2_Click);
             // 
             // Mybutton1
             // 
@@ -150,32 +103,99 @@ namespace E_MEET.Windforms.User_sControl
             this.Mybutton1.UseVisualStyleBackColor = false;
             this.Mybutton1.Click += new System.EventHandler(this.Mybutton1_Click);
             // 
+            // ListView1
+            // 
+            this.ListView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nom,
+            this.Prenom,
+            this.columnHeader1,
+            this.Contact,
+            this.Sexe,
+            this.Loalisation});
+            this.ListView1.FullRowSelect = true;
+            this.ListView1.GridLines = true;
+            this.ListView1.HideSelection = false;
+            this.ListView1.Location = new System.Drawing.Point(44, 64);
+            this.ListView1.Margin = new System.Windows.Forms.Padding(4);
+            this.ListView1.Name = "ListView1";
+            this.ListView1.Size = new System.Drawing.Size(751, 360);
+            this.ListView1.TabIndex = 4;
+            this.ListView1.UseCompatibleStateImageBehavior = false;
+            this.ListView1.View = System.Windows.Forms.View.Details;
+            this.ListView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged_1);
+            // 
+            // Nom
+            // 
+            this.Nom.Text = "Nom";
+            this.Nom.Width = 102;
+            // 
+            // Prenom
+            // 
+            this.Prenom.Text = "Prenom";
+            this.Prenom.Width = 93;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Email";
+            this.columnHeader1.Width = 154;
+            // 
+            // Contact
+            // 
+            this.Contact.Text = "Contact";
+            this.Contact.Width = 124;
+            // 
+            // Sexe
+            // 
+            this.Sexe.Text = "Sexe";
+            this.Sexe.Width = 106;
+            // 
+            // Loalisation
+            // 
+            this.Loalisation.Text = "Localisation";
+            this.Loalisation.Width = 169;
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PictureBox2.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
+            this.PictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(47, 38);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox2.TabIndex = 7;
+            this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
             // E_AddAppoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.PictureBox2);
+            this.Controls.Add(this.ListView1);
             this.Controls.Add(this.Mybutton3);
             this.Controls.Add(this.Mybutton2);
             this.Controls.Add(this.Mybutton1);
-            this.Controls.Add(this.ListView1);
             this.Name = "E_AddAppoint";
             this.Size = new System.Drawing.Size(996, 451);
             this.Load += new System.EventHandler(this.E_AddAppoint_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView ListView1;
         private OutilsWindforms.Mybutton Mybutton1;
         private OutilsWindforms.Mybutton Mybutton2;
         private OutilsWindforms.Mybutton Mybutton3;
+        private System.Windows.Forms.ListView ListView1;
         private System.Windows.Forms.ColumnHeader Nom;
         private System.Windows.Forms.ColumnHeader Prenom;
-        private System.Windows.Forms.ColumnHeader Email;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader Contact;
         private System.Windows.Forms.ColumnHeader Sexe;
-        private System.Windows.Forms.ColumnHeader Localisation;
+        private System.Windows.Forms.ColumnHeader Loalisation;
+        private System.Windows.Forms.PictureBox PictureBox2;
     }
 }

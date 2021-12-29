@@ -35,7 +35,7 @@ namespace E_MEET.Windforms
                 try
                 {
                     Program.CurrentUser = Utilisateurmanager.Authenticate(TxtEmail.Text, TxtPassword.Text);                
-                    Loading1.ShowDialog();
+                    //Loading1.ShowDialog();
                     var form = new MainApp();
                     form.Show();
                     ExitApp = false;
@@ -59,8 +59,13 @@ namespace E_MEET.Windforms
             form.Show();
             this.Close();
         }       
+        private void Clear()
+        {
+            TxtEmail.Clear();
+            TxtPassword.Clear();
+        }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             Panel2.Width += 3;
             if (Panel2.Width >= 397)
@@ -69,10 +74,11 @@ namespace E_MEET.Windforms
                 Loading1.Close();
             }
         }
-        private void Clear()
+
+        private void Authenticate_Load(object sender, EventArgs e)
         {
-            TxtEmail.Clear();
-            TxtPassword.Clear();
+            TxtEmail.Text = "administrator@gmail.com";
+            TxtPassword.Text = "admin";
         }
     }
 }

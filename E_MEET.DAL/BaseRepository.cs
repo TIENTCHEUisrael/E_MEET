@@ -10,7 +10,7 @@ namespace E_MEET.DAL
 {
     public class BaseRepository<T>
     {
-        protected readonly string Path = $"Fichier/{typeof(T).Name}.json";
+        protected readonly string Path = $"JSON/{typeof(T).Name}.json";
         protected List<T> Datas;
         private Serializer<List<T>> Serialiser;
         public BaseRepository()
@@ -106,5 +106,5 @@ namespace E_MEET.DAL
             if (fi.Exists && fi.Length > 0)
                 Datas = Serialiser.Deserialize();
         }
-        }
     }
+}

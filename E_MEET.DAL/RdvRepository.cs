@@ -13,12 +13,12 @@ namespace E_MEET.DAL
         {
 
         }
-        public List<RendezVous> FindByMotif(string reference)
+        public List<RendezVous> FindByIdentifiant(string identification)
         {
             List<RendezVous> list = new List<RendezVous>();
             foreach (var data in Datas)
             {
-                if (data.Motif.ToLower().Contains(reference.ToLower()))
+                if (data.Id.Contains(identification))
                     list.Add(data);
 
             }

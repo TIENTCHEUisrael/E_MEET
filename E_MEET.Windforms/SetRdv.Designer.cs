@@ -29,7 +29,6 @@ namespace E_MEET.Windforms
         /// </summary>
         private void InitializeComponent()
         {
-            this.Mybutton3 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Mybutton2 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Mybutton1 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -60,10 +59,10 @@ namespace E_MEET.Windforms
             this.RdQuoti = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LblDuree = new System.Windows.Forms.Label();
+            this.TrackBar1 = new System.Windows.Forms.TrackBar();
             this.CmdFin = new System.Windows.Forms.ComboBox();
             this.CmdDebut = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.TrackBar1 = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,31 +70,14 @@ namespace E_MEET.Windforms
             this.label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.TxtMotif = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.PanelPeriodiciter.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBar1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Mybutton3
-            // 
-            this.Mybutton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Mybutton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Mybutton3.Bordercolor = System.Drawing.Color.DodgerBlue;
-            this.Mybutton3.BorderRadius = 40;
-            this.Mybutton3.BorderSize = 0;
-            this.Mybutton3.FlatAppearance.BorderSize = 0;
-            this.Mybutton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mybutton3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mybutton3.ForeColor = System.Drawing.Color.White;
-            this.Mybutton3.Location = new System.Drawing.Point(407, 568);
-            this.Mybutton3.Name = "Mybutton3";
-            this.Mybutton3.Size = new System.Drawing.Size(150, 40);
-            this.Mybutton3.TabIndex = 19;
-            this.Mybutton3.Text = "Clean";
-            this.Mybutton3.TextColor = System.Drawing.Color.White;
-            this.Mybutton3.UseVisualStyleBackColor = false;
             // 
             // Mybutton2
             // 
@@ -108,7 +90,7 @@ namespace E_MEET.Windforms
             this.Mybutton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mybutton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton2.ForeColor = System.Drawing.Color.White;
-            this.Mybutton2.Location = new System.Drawing.Point(251, 568);
+            this.Mybutton2.Location = new System.Drawing.Point(421, 568);
             this.Mybutton2.Name = "Mybutton2";
             this.Mybutton2.Size = new System.Drawing.Size(150, 40);
             this.Mybutton2.TabIndex = 18;
@@ -127,13 +109,14 @@ namespace E_MEET.Windforms
             this.Mybutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mybutton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton1.ForeColor = System.Drawing.Color.White;
-            this.Mybutton1.Location = new System.Drawing.Point(92, 568);
+            this.Mybutton1.Location = new System.Drawing.Point(139, 568);
             this.Mybutton1.Name = "Mybutton1";
             this.Mybutton1.Size = new System.Drawing.Size(150, 40);
             this.Mybutton1.TabIndex = 17;
             this.Mybutton1.Text = "Save";
             this.Mybutton1.TextColor = System.Drawing.Color.White;
             this.Mybutton1.UseVisualStyleBackColor = false;
+            this.Mybutton1.Click += new System.EventHandler(this.Mybutton1_Click);
             // 
             // groupBox3
             // 
@@ -585,10 +568,12 @@ namespace E_MEET.Windforms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.LblDuree);
+            this.groupBox1.Controls.Add(this.TrackBar1);
             this.groupBox1.Controls.Add(this.CmdFin);
             this.groupBox1.Controls.Add(this.CmdDebut);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.TrackBar1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -600,6 +585,30 @@ namespace E_MEET.Windforms
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heure de RendezVous";
+            // 
+            // LblDuree
+            // 
+            this.LblDuree.AutoSize = true;
+            this.LblDuree.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDuree.ForeColor = System.Drawing.Color.Gray;
+            this.LblDuree.Location = new System.Drawing.Point(454, 119);
+            this.LblDuree.Name = "LblDuree";
+            this.LblDuree.Size = new System.Drawing.Size(36, 18);
+            this.LblDuree.TabIndex = 26;
+            this.LblDuree.Text = ".  .  .";
+            // 
+            // TrackBar1
+            // 
+            this.TrackBar1.LargeChange = 30;
+            this.TrackBar1.Location = new System.Drawing.Point(88, 95);
+            this.TrackBar1.Maximum = 360;
+            this.TrackBar1.Minimum = 30;
+            this.TrackBar1.Name = "TrackBar1";
+            this.TrackBar1.Size = new System.Drawing.Size(360, 45);
+            this.TrackBar1.SmallChange = 30;
+            this.TrackBar1.TabIndex = 25;
+            this.TrackBar1.TickFrequency = 30;
+            this.TrackBar1.Value = 30;
             // 
             // CmdFin
             // 
@@ -648,27 +657,6 @@ namespace E_MEET.Windforms
             this.CmdDebut.Name = "CmdDebut";
             this.CmdDebut.Size = new System.Drawing.Size(184, 24);
             this.CmdDebut.TabIndex = 23;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(473, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 18);
-            this.label12.TabIndex = 8;
-            this.label12.Text = ".  .  .";
-            // 
-            // TrackBar1
-            // 
-            this.TrackBar1.Location = new System.Drawing.Point(88, 101);
-            this.TrackBar1.Maximum = 360;
-            this.TrackBar1.Minimum = 30;
-            this.TrackBar1.Name = "TrackBar1";
-            this.TrackBar1.Size = new System.Drawing.Size(349, 45);
-            this.TrackBar1.TabIndex = 7;
-            this.TrackBar1.Value = 30;
             // 
             // label5
             // 
@@ -742,14 +730,31 @@ namespace E_MEET.Windforms
             this.TxtMotif.Size = new System.Drawing.Size(537, 59);
             this.TxtMotif.TabIndex = 21;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(483, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(110, 22);
+            this.textBox1.TabIndex = 22;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(380, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 18);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Identifiant: ";
+            // 
             // SetRdv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 611);
+            this.ClientSize = new System.Drawing.Size(661, 611);
             this.Controls.Add(this.TxtMotif);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.Mybutton3);
             this.Controls.Add(this.Mybutton2);
             this.Controls.Add(this.Mybutton1);
             this.Controls.Add(this.groupBox3);
@@ -760,6 +765,7 @@ namespace E_MEET.Windforms
             this.Name = "SetRdv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SetRdv";
+            this.Load += new System.EventHandler(this.SetRdv_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -775,8 +781,6 @@ namespace E_MEET.Windforms
         }
 
         #endregion
-
-        private OutilsWindforms.Mybutton Mybutton3;
         private OutilsWindforms.Mybutton Mybutton2;
         private OutilsWindforms.Mybutton Mybutton1;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -809,8 +813,6 @@ namespace E_MEET.Windforms
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox CmdFin;
         private System.Windows.Forms.ComboBox CmdDebut;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TrackBar TrackBar1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -818,5 +820,9 @@ namespace E_MEET.Windforms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.TextBox TxtMotif;
+        private System.Windows.Forms.Label LblDuree;
+        private System.Windows.Forms.TrackBar TrackBar1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

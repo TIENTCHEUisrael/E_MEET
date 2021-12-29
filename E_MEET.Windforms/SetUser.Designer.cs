@@ -29,6 +29,7 @@ namespace E_MEET.Windforms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,6 +52,8 @@ namespace E_MEET.Windforms
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -105,9 +108,10 @@ namespace E_MEET.Windforms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(476, 8);
+            this.pictureBox1.Image = global::E_MEET.Windforms.Properties.Resources.E_MEET_3D;
+            this.pictureBox1.Location = new System.Drawing.Point(460, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(163, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 148;
             this.pictureBox1.TabStop = false;
@@ -130,6 +134,7 @@ namespace E_MEET.Windforms
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.TextColor = System.Drawing.Color.White;
             this.BtnCancel.UseVisualStyleBackColor = false;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnAdd
             // 
@@ -149,6 +154,7 @@ namespace E_MEET.Windforms
             this.BtnAdd.Text = "Save";
             this.BtnAdd.TextColor = System.Drawing.Color.White;
             this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Guna2CirclePictureBox1
             // 
@@ -162,6 +168,7 @@ namespace E_MEET.Windforms
             this.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Guna2CirclePictureBox1.TabIndex = 145;
             this.Guna2CirclePictureBox1.TabStop = false;
+            this.Guna2CirclePictureBox1.Click += new System.EventHandler(this.Guna2CirclePictureBox1_Click);
             // 
             // label3
             // 
@@ -426,15 +433,28 @@ namespace E_MEET.Windforms
             this.lb1.TabIndex = 130;
             this.lb1.Text = "Email :";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Panel1
+            // 
+            this.Panel1.Location = new System.Drawing.Point(24, 1);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(225, 10);
+            this.Panel1.TabIndex = 152;
+            // 
             // SetUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 479);
+            this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Guna2RadioButton2);
             this.Controls.Add(this.Guna2RadioButton1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.Guna2CirclePictureBox1);
@@ -453,10 +473,12 @@ namespace E_MEET.Windforms
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SetUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SetUser";
+            this.Load += new System.EventHandler(this.SetUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -488,5 +510,7 @@ namespace E_MEET.Windforms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel Panel1;
     }
 }

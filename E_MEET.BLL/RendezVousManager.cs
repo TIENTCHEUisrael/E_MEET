@@ -1,10 +1,6 @@
 ﻿using E_MEET.BO;
 using E_MEET.DAL;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_MEET.BLL
 {
@@ -50,6 +46,19 @@ namespace E_MEET.BLL
         public List<RendezVous> GetAllrdv()
         {
             return Rdvrepository.GetAll();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public RendezVous AuthenticateRdv(string id)
+        {
+            var rdv = Rdvrepository.FindByIdentifiant(id);
+            foreach (var r in rdv)
+                if (r.Id == id)
+                    return r;
+            return null;
         }
     }
 }

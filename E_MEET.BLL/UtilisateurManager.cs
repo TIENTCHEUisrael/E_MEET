@@ -97,5 +97,11 @@ namespace E_MEET.BLL
             user.DeleteClient(clt);
             Userrepository.Set(user, user);
         }
+        public void EditUserClient(Utilisateur user,Client oldclt,Client newclt)
+        {
+            if (Userrepository.Check(user) < 0)
+                throw new KeyNotFoundException($"{nameof(Utilisateur)} not found");
+            
+        }
     }
 }

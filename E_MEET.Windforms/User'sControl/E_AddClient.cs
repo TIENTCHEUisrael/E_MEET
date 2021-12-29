@@ -18,13 +18,11 @@ namespace E_MEET.Windforms.User_sControl
         private ClientManager clientManager;
         private UtilisateurManager utilisateurManager;
         private string Personne;
-        private Client Editclt;
         private Loading loading;
         public E_AddClient()
         {
             InitializeComponent();
             clientManager = new ClientManager();
-            Editclt = new Client();
             utilisateurManager = new UtilisateurManager();
             loading = new Loading();
         }
@@ -35,8 +33,7 @@ namespace E_MEET.Windforms.User_sControl
             TxtEmail.Clear();
             TxtFull.Clear();
             TxtLocalisation.Clear();
-            TxtName.Clear();
-            TxtProfession.Clear();
+            TxtName.Clear();            
             RdHomme.Checked.ToString();
         }
         private void Mybutton2_Click(object sender, EventArgs e)
@@ -46,30 +43,16 @@ namespace E_MEET.Windforms.User_sControl
 
         private void Mybutton1_Click(object sender, EventArgs e)
         {
-            if (RdHomme.Checked)
-            {
-                Personne = "Homme";
-            }
-            else
-            {
-                Personne = "Femme";
-            }
+            Choix();
             if (TxtEmail.Text.Contains('@') && TxtEmail.Text.Contains('.'))
             {
                 try
                 {
                     var client = new Client(TxtEmail.Text, TxtName.Text, TxtFull.Text, PictureClient.ImageLocation, int.Parse(TxtAge.Text), int.Parse(TxtContact.Text), Personne, TxtLocalisation.Text);
-                    if (Editclt == null)
-                    {
-                        Program.CurrentClients = client;
+                    
                         clientManager.AddClient(client);
-                        utilisateurManager.AddUserClient(Program.CurrentUser, client);
-                    }
-                    else
-                    {
-                        clientManager.EditClient(Editclt, client);
-                    }
-                    loading.ShowDialog();
+                        utilisateurManager.AddUserClient(Program.CurrentUser, client);                    
+                    //loading.ShowDialog();
                     MessageBox.Show($"Client added for {Program.CurrentUser.Nom}");
                     Clear();
                 }
@@ -81,6 +64,18 @@ namespace E_MEET.Windforms.User_sControl
             else
             {
                 MessageBox.Show("Email doesn't Match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Choix()
+        {
+            if (RdHomme.Checked)
+            {
+                Personne = "Homme";
+            }
+            else
+            {
+                Personne = "Femme";
             }
         }
 
@@ -100,6 +95,14 @@ namespace E_MEET.Windforms.User_sControl
             ofd.Filter = "images (*.jpg ;*.jpeg; *.png; *.gif; *.tiff)|*.jpg;*.jpeg;*.gif;*.tiff;*.png";
             ofd.ShowDialog();
             PictureClient.ImageLocation = ofd.FileName;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            //loading.ShowDialog();
+            var form = new ListClient(Program.CurrentUser);
+            form.ShowDialog();
+            
         }
     }
 }

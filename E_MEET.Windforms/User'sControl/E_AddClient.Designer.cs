@@ -34,7 +34,6 @@ namespace E_MEET.Windforms.User_sControl
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.RdFemme = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -45,7 +44,6 @@ namespace E_MEET.Windforms.User_sControl
             this.TxtFull = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtContact = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtAge = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtProfession = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtLocalisation = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,6 +51,7 @@ namespace E_MEET.Windforms.User_sControl
             this.Mybutton2 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.Button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,23 +99,12 @@ namespace E_MEET.Windforms.User_sControl
             this.label4.TabIndex = 3;
             this.label4.Text = "Age :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(382, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 32);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Profession :";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(14, 351);
+            this.label6.Location = new System.Drawing.Point(386, 272);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 32);
             this.label6.TabIndex = 5;
@@ -127,7 +115,7 @@ namespace E_MEET.Windforms.User_sControl
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(382, 351);
+            this.label7.Location = new System.Drawing.Point(24, 356);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 32);
             this.label7.TabIndex = 6;
@@ -143,7 +131,7 @@ namespace E_MEET.Windforms.User_sControl
             this.RdFemme.CheckedState.InnerOffset = -4;
             this.RdFemme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RdFemme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RdFemme.Location = new System.Drawing.Point(596, 360);
+            this.RdFemme.Location = new System.Drawing.Point(357, 365);
             this.RdFemme.Name = "RdFemme";
             this.RdFemme.Size = new System.Drawing.Size(87, 23);
             this.RdFemme.TabIndex = 7;
@@ -163,7 +151,7 @@ namespace E_MEET.Windforms.User_sControl
             this.RdHomme.CheckedState.InnerOffset = -4;
             this.RdHomme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RdHomme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RdHomme.Location = new System.Drawing.Point(503, 360);
+            this.RdHomme.Location = new System.Drawing.Point(202, 365);
             this.RdHomme.Name = "RdHomme";
             this.RdHomme.Size = new System.Drawing.Size(62, 23);
             this.RdHomme.TabIndex = 8;
@@ -269,7 +257,7 @@ namespace E_MEET.Windforms.User_sControl
             this.TxtContact.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtContact.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtContact.HoverState.Parent = this.TxtContact;
-            this.TxtContact.Location = new System.Drawing.Point(162, 347);
+            this.TxtContact.Location = new System.Drawing.Point(534, 268);
             this.TxtContact.Name = "TxtContact";
             this.TxtContact.PasswordChar = '\0';
             this.TxtContact.PlaceholderText = "Your Contact";
@@ -301,35 +289,12 @@ namespace E_MEET.Windforms.User_sControl
             this.TxtAge.Size = new System.Drawing.Size(213, 36);
             this.TxtAge.TabIndex = 14;
             // 
-            // TxtProfession
-            // 
-            this.TxtProfession.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtProfession.DefaultText = "";
-            this.TxtProfession.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtProfession.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtProfession.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtProfession.DisabledState.Parent = this.TxtProfession;
-            this.TxtProfession.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtProfession.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtProfession.FocusedState.Parent = this.TxtProfession;
-            this.TxtProfession.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtProfession.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtProfession.HoverState.Parent = this.TxtProfession;
-            this.TxtProfession.Location = new System.Drawing.Point(561, 178);
-            this.TxtProfession.Name = "TxtProfession";
-            this.TxtProfession.PasswordChar = '\0';
-            this.TxtProfession.PlaceholderText = "Enter the profession";
-            this.TxtProfession.SelectedText = "";
-            this.TxtProfession.ShadowDecoration.Parent = this.TxtProfession;
-            this.TxtProfession.Size = new System.Drawing.Size(213, 36);
-            this.TxtProfession.TabIndex = 15;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(382, 272);
+            this.label8.Location = new System.Drawing.Point(381, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(184, 32);
             this.label8.TabIndex = 16;
@@ -349,7 +314,7 @@ namespace E_MEET.Windforms.User_sControl
             this.TxtLocalisation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtLocalisation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtLocalisation.HoverState.Parent = this.TxtLocalisation;
-            this.TxtLocalisation.Location = new System.Drawing.Point(561, 272);
+            this.TxtLocalisation.Location = new System.Drawing.Point(571, 182);
             this.TxtLocalisation.Name = "TxtLocalisation";
             this.TxtLocalisation.PasswordChar = '\0';
             this.TxtLocalisation.PlaceholderText = "Enter your localisation";
@@ -380,7 +345,7 @@ namespace E_MEET.Windforms.User_sControl
             this.Mybutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mybutton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton1.ForeColor = System.Drawing.Color.White;
-            this.Mybutton1.Location = new System.Drawing.Point(679, 382);
+            this.Mybutton1.Location = new System.Drawing.Point(485, 382);
             this.Mybutton1.Name = "Mybutton1";
             this.Mybutton1.Size = new System.Drawing.Size(150, 48);
             this.Mybutton1.TabIndex = 20;
@@ -400,7 +365,7 @@ namespace E_MEET.Windforms.User_sControl
             this.Mybutton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mybutton2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton2.ForeColor = System.Drawing.Color.White;
-            this.Mybutton2.Location = new System.Drawing.Point(830, 382);
+            this.Mybutton2.Location = new System.Drawing.Point(709, 382);
             this.Mybutton2.Name = "Mybutton2";
             this.Mybutton2.Size = new System.Drawing.Size(150, 48);
             this.Mybutton2.TabIndex = 21;
@@ -422,17 +387,29 @@ namespace E_MEET.Windforms.User_sControl
             this.Panel1.Size = new System.Drawing.Size(356, 16);
             this.Panel1.TabIndex = 22;
             // 
+            // Button1
+            // 
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button1.Location = new System.Drawing.Point(905, 407);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(88, 41);
+            this.Button1.TabIndex = 23;
+            this.Button1.Text = "Liste";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // E_AddClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Mybutton2);
             this.Controls.Add(this.Mybutton1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TxtLocalisation);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.TxtProfession);
             this.Controls.Add(this.TxtAge);
             this.Controls.Add(this.TxtContact);
             this.Controls.Add(this.TxtFull);
@@ -443,7 +420,6 @@ namespace E_MEET.Windforms.User_sControl
             this.Controls.Add(this.RdFemme);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -462,7 +438,6 @@ namespace E_MEET.Windforms.User_sControl
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2RadioButton RdFemme;
@@ -473,7 +448,6 @@ namespace E_MEET.Windforms.User_sControl
         private Guna.UI2.WinForms.Guna2TextBox TxtFull;
         private Guna.UI2.WinForms.Guna2TextBox TxtContact;
         private Guna.UI2.WinForms.Guna2TextBox TxtAge;
-        private Guna.UI2.WinForms.Guna2TextBox TxtProfession;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox TxtLocalisation;
         private System.Windows.Forms.Label label9;
@@ -481,5 +455,6 @@ namespace E_MEET.Windforms.User_sControl
         private OutilsWindforms.Mybutton Mybutton2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel Panel1;
+        private System.Windows.Forms.Button Button1;
     }
 }

@@ -6,7 +6,7 @@ namespace E_MEET.Windforms.OutilsWindforms
     public partial class MyMessageBox : Form
     {
         private Loading loading;
-        private bool ExitApp = true;
+        private bool ExitApp=true;
         public MyMessageBox()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace E_MEET.Windforms.OutilsWindforms
 
         private void ButtonOui_Click(object sender, EventArgs e)
         {
-            loading.ShowDialog();
+            //loading.ShowDialog();
             Authenticate form = new Authenticate();
             form.Show();
             ExitApp = false;
@@ -24,7 +24,7 @@ namespace E_MEET.Windforms.OutilsWindforms
 
         private void ButtonNon_Click(object sender, EventArgs e)
         {
-            loading.ShowDialog();
+            //loading.ShowDialog();
             NewUser form = new NewUser();
             form.Show();
             ExitApp = false;

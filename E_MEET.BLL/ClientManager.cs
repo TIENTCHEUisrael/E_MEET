@@ -27,6 +27,19 @@ namespace E_MEET.BLL
         {
             Clientrepository.Set(oldclt, newclt);
         }
+        /// <summary>
+        /// Authentification du client
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public Client AuthenticateClt(string email)
+        {
+            var clt = Clientrepository.FindByEmail(email);
+            foreach (var c in clt)
+                if (c.Email == email)
+                    return c;
+            return null;
+        }
 
         /// <summary>
         /// Add the client
@@ -44,20 +57,6 @@ namespace E_MEET.BLL
         {
             Clientrepository.Set(user, user);
 
-        }
-        /// <summary>
-        /// The Authentification
-        /// </summary>
-        /// <param name="email"></param>
-        /// <param name="Nom"></param>
-        /// <returns></returns>
-        public Client Authenticate(string email, string Nom)
-        {
-            var clients = Clientrepository.FindByEmail(email);
-            foreach (var u in clients)
-                if (u.Email == email && u.Nom == Nom)
-                    return u;
-            return null;
         }
         /// <summary>
         /// Get all Client
@@ -81,7 +80,7 @@ namespace E_MEET.BLL
         /// <param name="clt"></param>
         /// <param name="rdv"></param>
         public void AddClientRdv(Client clt, RendezVous rdv)
-        {
+        {            
             if (Clientrepository.Check(clt) < 0)
                 throw new KeyNotFoundException($"{nameof(Client)} not found");
             clt.AddRdv(rdv);

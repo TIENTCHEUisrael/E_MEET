@@ -8,58 +8,53 @@ namespace E_MEET.BO
 {
     public class RendezVous
     {
+        public string Id { get; set; }
+        public string ClientsNom { get; set; }
         public string HeureDebut { get; set; }
         public string HeureFin { get; set; }
         public int Temps { get; set; }
-        public string Choix1 { get; set; }
-        public string Choix2 { get; set; }
-        public int Choixjour1 { get; set; }
-        public int ChoixMois1 { get; set; }
-        public string NumeroJour { get; set; }
-        public string Choixjour2 { get; set; }
-        public int ChoixMois2 { get; set; }
+        public string ChoixPeriodicite1 { get; set; }
+        public string ChoixPeriodicite2 { get; set; }
+        public string ChoixDeFin { get; set; }
         public DateTime DateDebut { get; set; }
         public DateTime DateFin { get; set; }
-        public int OccurrenceJours { get; set; }
-        public string Choix3 { get; set; }
         public string Motif { get; set; }
 
-        public override bool Equals(object obj)
+        public RendezVous()
         {
-            return obj is RendezVous vous &&
-                   Motif == vous.Motif;
-        }
 
-        public override int GetHashCode()
-        {
-            return -1340830888 + EqualityComparer<string>.Default.GetHashCode(Motif);
         }
-
-        public RendezVous(string heureDebut, string heureFin, int temps, string choix1, string choix2, int choixjour1, int choixMois1, string numeroJour, string choixjour2, int choixMois2, DateTime dateDebut, DateTime dateFin, int occurrenceJours, string choix3, string motif)
+        public RendezVous(string clientNom,string heureDebut, string heureFin, int temps, string choixPeriodicite1, string choixPeriodicite2, string choixDeFin, DateTime dateDebut, DateTime dateFin, string motif,string id)
         {
+            ClientsNom = clientNom;
             HeureDebut = heureDebut;
             HeureFin = heureFin;
             Temps = temps;
-            Choix1 = choix1;
-            Choix2 = choix2;
-            Choixjour1 = choixjour1;
-            ChoixMois1 = choixMois1;
-            NumeroJour = numeroJour;
-            Choixjour2 = choixjour2;
-            ChoixMois2 = choixMois2;
+            ChoixPeriodicite1 = choixPeriodicite1;
+            ChoixPeriodicite2 = choixPeriodicite2;
+            ChoixDeFin = choixDeFin;
             DateDebut = dateDebut;
             DateFin = dateFin;
-            OccurrenceJours = occurrenceJours;
-            Choix3 = choix3;
             Motif = motif;
+            Id = id;
         }
-        public RendezVous(RendezVous r) : this(r?.HeureDebut, r?.HeureFin, r?.Temps ?? 30, r?.Choix1, r?.Choix2, r?.Choixjour1??1, r?.ChoixMois1 ?? 1, r?.NumeroJour, r?.Choixjour2, r?.ChoixMois2 ?? 1,r.DateDebut,r.DateFin,r?.OccurrenceJours??2,r?.Choix3,r?.Motif)
+        public RendezVous(RendezVous r):this(r?.ClientsNom,r?.HeureDebut,r?.HeureFin,r?.Temps??30,r?.ChoixPeriodicite1,r?.ChoixPeriodicite2,r?.ChoixDeFin,r.DateDebut,r.DateFin,r?.Motif,r?.Id)
         {
 
         }
         public Object CLone()
         {
-            return new RendezVous(HeureDebut, HeureFin, Temps, Choix1, Choix2,Choixjour1, ChoixMois1, NumeroJour, Choixjour2, ChoixMois2, DateDebut, DateFin, OccurrenceJours, Choix3, Motif);
+            return new RendezVous(ClientsNom,HeureDebut, HeureFin, Temps, ChoixPeriodicite1, ChoixPeriodicite2, ChoixDeFin, DateDebut, DateFin, Motif,Id);
         }
+        public override bool Equals(object obj)
+        {
+            return obj is RendezVous vous &&
+                   Motif == vous.Motif;
+        }
+        public override int GetHashCode()
+        {
+            return -1340830888 + EqualityComparer<string>.Default.GetHashCode(Motif);
+        }          
+       
     }
 }

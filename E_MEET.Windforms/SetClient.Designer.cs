@@ -29,31 +29,38 @@ namespace E_MEET.Windforms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.Panel1 = new System.Windows.Forms.Panel();
             this.Mybutton2 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
             this.Mybutton1 = new E_MEET.Windforms.OutilsWindforms.Mybutton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtLocalisation = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtProfession = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtAge = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtContact = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtFull = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.Guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.Guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.PictureClient = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.RdHomme = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.RdFemme = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Guna2CirclePictureBox1)).BeginInit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureClient)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Panel1
+            // 
+            this.Panel1.Location = new System.Drawing.Point(12, 3);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(244, 10);
+            this.Panel1.TabIndex = 42;
+            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // Mybutton2
             // 
@@ -64,12 +71,12 @@ namespace E_MEET.Windforms
             this.Mybutton2.BorderSize = 0;
             this.Mybutton2.FlatAppearance.BorderSize = 0;
             this.Mybutton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mybutton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mybutton2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton2.ForeColor = System.Drawing.Color.White;
-            this.Mybutton2.Location = new System.Drawing.Point(844, 340);
+            this.Mybutton2.Location = new System.Drawing.Point(701, 351);
             this.Mybutton2.Name = "Mybutton2";
-            this.Mybutton2.Size = new System.Drawing.Size(150, 40);
-            this.Mybutton2.TabIndex = 43;
+            this.Mybutton2.Size = new System.Drawing.Size(150, 48);
+            this.Mybutton2.TabIndex = 41;
             this.Mybutton2.Text = "Reset";
             this.Mybutton2.TextColor = System.Drawing.Color.White;
             this.Mybutton2.UseVisualStyleBackColor = false;
@@ -83,34 +90,26 @@ namespace E_MEET.Windforms
             this.Mybutton1.BorderSize = 0;
             this.Mybutton1.FlatAppearance.BorderSize = 0;
             this.Mybutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mybutton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mybutton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybutton1.ForeColor = System.Drawing.Color.White;
-            this.Mybutton1.Location = new System.Drawing.Point(674, 340);
+            this.Mybutton1.Location = new System.Drawing.Point(477, 351);
             this.Mybutton1.Name = "Mybutton1";
-            this.Mybutton1.Size = new System.Drawing.Size(150, 40);
-            this.Mybutton1.TabIndex = 42;
-            this.Mybutton1.Text = "Save";
+            this.Mybutton1.Size = new System.Drawing.Size(150, 48);
+            this.Mybutton1.TabIndex = 40;
+            this.Mybutton1.Text = "Add";
             this.Mybutton1.TextColor = System.Drawing.Color.White;
             this.Mybutton1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
+            this.Mybutton1.Click += new System.EventHandler(this.Mybutton1_Click_1);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(763, 22);
+            this.label9.Location = new System.Drawing.Point(776, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 32);
-            this.label9.TabIndex = 40;
+            this.label9.TabIndex = 39;
             this.label9.Text = "Picture :";
             // 
             // TxtLocalisation
@@ -127,48 +126,25 @@ namespace E_MEET.Windforms
             this.TxtLocalisation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtLocalisation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtLocalisation.HoverState.Parent = this.TxtLocalisation;
-            this.TxtLocalisation.Location = new System.Drawing.Point(568, 265);
+            this.TxtLocalisation.Location = new System.Drawing.Point(553, 151);
             this.TxtLocalisation.Name = "TxtLocalisation";
             this.TxtLocalisation.PasswordChar = '\0';
             this.TxtLocalisation.PlaceholderText = "Enter your localisation";
             this.TxtLocalisation.SelectedText = "";
             this.TxtLocalisation.ShadowDecoration.Parent = this.TxtLocalisation;
             this.TxtLocalisation.Size = new System.Drawing.Size(213, 36);
-            this.TxtLocalisation.TabIndex = 39;
+            this.TxtLocalisation.TabIndex = 38;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(378, 269);
+            this.label8.Location = new System.Drawing.Point(373, 151);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(184, 32);
-            this.label8.TabIndex = 38;
+            this.label8.TabIndex = 37;
             this.label8.Text = "Localisation :";
-            // 
-            // TxtProfession
-            // 
-            this.TxtProfession.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtProfession.DefaultText = "";
-            this.TxtProfession.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtProfession.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtProfession.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtProfession.DisabledState.Parent = this.TxtProfession;
-            this.TxtProfession.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtProfession.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtProfession.FocusedState.Parent = this.TxtProfession;
-            this.TxtProfession.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtProfession.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtProfession.HoverState.Parent = this.TxtProfession;
-            this.TxtProfession.Location = new System.Drawing.Point(544, 175);
-            this.TxtProfession.Name = "TxtProfession";
-            this.TxtProfession.PasswordChar = '\0';
-            this.TxtProfession.PlaceholderText = "Enter the profession";
-            this.TxtProfession.SelectedText = "";
-            this.TxtProfession.ShadowDecoration.Parent = this.TxtProfession;
-            this.TxtProfession.Size = new System.Drawing.Size(213, 36);
-            this.TxtProfession.TabIndex = 37;
             // 
             // TxtAge
             // 
@@ -184,7 +160,7 @@ namespace E_MEET.Windforms
             this.TxtAge.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtAge.HoverState.Parent = this.TxtAge;
-            this.TxtAge.Location = new System.Drawing.Point(544, 90);
+            this.TxtAge.Location = new System.Drawing.Point(553, 62);
             this.TxtAge.Name = "TxtAge";
             this.TxtAge.PasswordChar = '\0';
             this.TxtAge.PlaceholderText = "The Age";
@@ -207,7 +183,7 @@ namespace E_MEET.Windforms
             this.TxtContact.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtContact.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtContact.HoverState.Parent = this.TxtContact;
-            this.TxtContact.Location = new System.Drawing.Point(158, 344);
+            this.TxtContact.Location = new System.Drawing.Point(552, 237);
             this.TxtContact.Name = "TxtContact";
             this.TxtContact.PasswordChar = '\0';
             this.TxtContact.PlaceholderText = "Your Contact";
@@ -230,7 +206,7 @@ namespace E_MEET.Windforms
             this.TxtFull.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtFull.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtFull.HoverState.Parent = this.TxtFull;
-            this.TxtFull.Location = new System.Drawing.Point(158, 265);
+            this.TxtFull.Location = new System.Drawing.Point(154, 237);
             this.TxtFull.Name = "TxtFull";
             this.TxtFull.PasswordChar = '\0';
             this.TxtFull.PlaceholderText = "Enter the Fullname";
@@ -253,7 +229,7 @@ namespace E_MEET.Windforms
             this.TxtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtName.HoverState.Parent = this.TxtName;
-            this.TxtName.Location = new System.Drawing.Point(158, 175);
+            this.TxtName.Location = new System.Drawing.Point(154, 147);
             this.TxtName.Name = "TxtName";
             this.TxtName.PasswordChar = '\0';
             this.TxtName.PlaceholderText = "Enter Name";
@@ -276,7 +252,7 @@ namespace E_MEET.Windforms
             this.TxtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtEmail.HoverState.Parent = this.TxtEmail;
-            this.TxtEmail.Location = new System.Drawing.Point(158, 90);
+            this.TxtEmail.Location = new System.Drawing.Point(154, 62);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PasswordChar = '\0';
             this.TxtEmail.PlaceholderText = "Enter Email";
@@ -285,64 +261,64 @@ namespace E_MEET.Windforms
             this.TxtEmail.Size = new System.Drawing.Size(214, 36);
             this.TxtEmail.TabIndex = 32;
             // 
-            // Guna2CirclePictureBox1
+            // PictureClient
             // 
-            this.Guna2CirclePictureBox1.ImageRotate = 0F;
-            this.Guna2CirclePictureBox1.Location = new System.Drawing.Point(769, 74);
-            this.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1";
-            this.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Guna2CirclePictureBox1.ShadowDecoration.Parent = this.Guna2CirclePictureBox1;
-            this.Guna2CirclePictureBox1.Size = new System.Drawing.Size(190, 184);
-            this.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Guna2CirclePictureBox1.TabIndex = 31;
-            this.Guna2CirclePictureBox1.TabStop = false;
+            this.PictureClient.ImageRotate = 0F;
+            this.PictureClient.Location = new System.Drawing.Point(782, 61);
+            this.PictureClient.Name = "PictureClient";
+            this.PictureClient.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureClient.ShadowDecoration.Parent = this.PictureClient;
+            this.PictureClient.Size = new System.Drawing.Size(190, 212);
+            this.PictureClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureClient.TabIndex = 31;
+            this.PictureClient.TabStop = false;
             // 
-            // Guna2RadioButton2
+            // RdHomme
             // 
-            this.Guna2RadioButton2.AutoSize = true;
-            this.Guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Guna2RadioButton2.CheckedState.BorderThickness = 0;
-            this.Guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.Guna2RadioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guna2RadioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Guna2RadioButton2.Location = new System.Drawing.Point(579, 357);
-            this.Guna2RadioButton2.Name = "Guna2RadioButton2";
-            this.Guna2RadioButton2.Size = new System.Drawing.Size(62, 23);
-            this.Guna2RadioButton2.TabIndex = 30;
-            this.Guna2RadioButton2.Text = "Man";
-            this.Guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            this.Guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdHomme.AutoSize = true;
+            this.RdHomme.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RdHomme.CheckedState.BorderThickness = 0;
+            this.RdHomme.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RdHomme.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RdHomme.CheckedState.InnerOffset = -4;
+            this.RdHomme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdHomme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RdHomme.Location = new System.Drawing.Point(194, 334);
+            this.RdHomme.Name = "RdHomme";
+            this.RdHomme.Size = new System.Drawing.Size(62, 23);
+            this.RdHomme.TabIndex = 30;
+            this.RdHomme.Text = "Man";
+            this.RdHomme.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RdHomme.UncheckedState.BorderThickness = 2;
+            this.RdHomme.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.RdHomme.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
-            // Guna2RadioButton1
+            // RdFemme
             // 
-            this.Guna2RadioButton1.AutoSize = true;
-            this.Guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Guna2RadioButton1.CheckedState.BorderThickness = 0;
-            this.Guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.Guna2RadioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guna2RadioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Guna2RadioButton1.Location = new System.Drawing.Point(486, 357);
-            this.Guna2RadioButton1.Name = "Guna2RadioButton1";
-            this.Guna2RadioButton1.Size = new System.Drawing.Size(87, 23);
-            this.Guna2RadioButton1.TabIndex = 29;
-            this.Guna2RadioButton1.Text = "Women";
-            this.Guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.Guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RdFemme.AutoSize = true;
+            this.RdFemme.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RdFemme.CheckedState.BorderThickness = 0;
+            this.RdFemme.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RdFemme.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RdFemme.CheckedState.InnerOffset = -4;
+            this.RdFemme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdFemme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RdFemme.Location = new System.Drawing.Point(349, 334);
+            this.RdFemme.Name = "RdFemme";
+            this.RdFemme.Size = new System.Drawing.Size(87, 23);
+            this.RdFemme.TabIndex = 29;
+            this.RdFemme.Text = "Women";
+            this.RdFemme.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RdFemme.UncheckedState.BorderThickness = 2;
+            this.RdFemme.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.RdFemme.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(378, 348);
+            this.label7.Location = new System.Drawing.Point(16, 325);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 32);
             this.label7.TabIndex = 28;
@@ -353,32 +329,21 @@ namespace E_MEET.Windforms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(10, 348);
+            this.label6.Location = new System.Drawing.Point(378, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 32);
             this.label6.TabIndex = 27;
             this.label6.Text = "Contact :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(378, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 32);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Profession :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(378, 94);
+            this.label4.Location = new System.Drawing.Point(374, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 32);
-            this.label4.TabIndex = 25;
+            this.label4.TabIndex = 26;
             this.label4.Text = "Age :";
             // 
             // label3
@@ -386,10 +351,10 @@ namespace E_MEET.Windforms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(10, 269);
+            this.label3.Location = new System.Drawing.Point(6, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 32);
-            this.label3.TabIndex = 24;
+            this.label3.TabIndex = 25;
             this.label3.Text = "FullName :";
             // 
             // label2
@@ -397,10 +362,10 @@ namespace E_MEET.Windforms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(10, 94);
+            this.label2.Location = new System.Drawing.Point(6, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 32);
-            this.label2.TabIndex = 23;
+            this.label2.TabIndex = 24;
             this.label2.Text = "Email :";
             // 
             // label1
@@ -408,35 +373,39 @@ namespace E_MEET.Windforms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(10, 179);
+            this.label1.Location = new System.Drawing.Point(6, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 32);
-            this.label1.TabIndex = 22;
+            this.label1.TabIndex = 23;
             this.label1.Text = "Name :";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SetClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 408);
+            this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Mybutton2);
             this.Controls.Add(this.Mybutton1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TxtLocalisation);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.TxtProfession);
             this.Controls.Add(this.TxtAge);
             this.Controls.Add(this.TxtContact);
             this.Controls.Add(this.TxtFull);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.TxtEmail);
-            this.Controls.Add(this.Guna2CirclePictureBox1);
-            this.Controls.Add(this.Guna2RadioButton2);
-            this.Controls.Add(this.Guna2RadioButton1);
+            this.Controls.Add(this.PictureClient);
+            this.Controls.Add(this.RdHomme);
+            this.Controls.Add(this.RdFemme);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -445,8 +414,8 @@ namespace E_MEET.Windforms
             this.Name = "SetClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SetClient";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Guna2CirclePictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.SetClient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,27 +423,26 @@ namespace E_MEET.Windforms
 
         #endregion
 
+        private System.Windows.Forms.Panel Panel1;
         private OutilsWindforms.Mybutton Mybutton2;
         private OutilsWindforms.Mybutton Mybutton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox TxtLocalisation;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox TxtProfession;
         private Guna.UI2.WinForms.Guna2TextBox TxtAge;
         private Guna.UI2.WinForms.Guna2TextBox TxtContact;
         private Guna.UI2.WinForms.Guna2TextBox TxtFull;
         private Guna.UI2.WinForms.Guna2TextBox TxtName;
         private Guna.UI2.WinForms.Guna2TextBox TxtEmail;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox Guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2RadioButton Guna2RadioButton2;
-        private Guna.UI2.WinForms.Guna2RadioButton Guna2RadioButton1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox PictureClient;
+        private Guna.UI2.WinForms.Guna2RadioButton RdHomme;
+        private Guna.UI2.WinForms.Guna2RadioButton RdFemme;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

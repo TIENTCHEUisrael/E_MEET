@@ -58,6 +58,7 @@ namespace E_MEET.BO
         {
             Clients.Remove(client);
         }
+        
         public List<Client> GetClient()
         {
             var list = new List<Client>();
