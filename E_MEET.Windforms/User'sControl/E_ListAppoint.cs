@@ -34,7 +34,7 @@ namespace E_MEET.Windforms.User_sControl
                 var rdv = c.GetRDv();
                 foreach(var r in rdv)
                 {
-                    ListViewItem lvi = new ListViewItem(new string[] { r.Id, utilisateur.Nom, r.ClientsNom, r.DateDebut.ToString(), r.HeureDebut,r.Temps.ToString(), r.ChoixPeriodicite1, r.Motif, c.Contact.ToString() });
+                    ListViewItem lvi = new ListViewItem(new string[] { r.Id, utilisateur.Nom, r.ClientsNom, r.DateDebut.ToString(), r.HeureDebut,r.Temps.ToString(), r.ChoixPeriodicite1, r.Motif, c.Contact.ToString(),c.Prenom });
                     lvi.Tag = r;
                     ListView1.Items.Add(lvi);
                 }

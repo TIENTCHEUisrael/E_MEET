@@ -45,10 +45,9 @@ namespace E_MEET.Windforms.User_sControl
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.PictureUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.Button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
@@ -95,7 +94,7 @@ namespace E_MEET.Windforms.User_sControl
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(718, 123);
+            this.Label5.Location = new System.Drawing.Point(801, 123);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(85, 30);
             this.Label5.TabIndex = 5;
@@ -105,7 +104,7 @@ namespace E_MEET.Windforms.User_sControl
             // 
             this.Label6.AutoSize = true;
             this.Label6.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.Location = new System.Drawing.Point(718, 216);
+            this.Label6.Location = new System.Drawing.Point(801, 216);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(85, 30);
             this.Label6.TabIndex = 6;
@@ -115,7 +114,7 @@ namespace E_MEET.Windforms.User_sControl
             // 
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(718, 316);
+            this.Label7.Location = new System.Drawing.Point(801, 316);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(85, 30);
             this.Label7.TabIndex = 7;
@@ -146,7 +145,7 @@ namespace E_MEET.Windforms.User_sControl
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(596, 129);
+            this.label9.Location = new System.Drawing.Point(631, 129);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 24);
             this.label9.TabIndex = 10;
@@ -156,7 +155,7 @@ namespace E_MEET.Windforms.User_sControl
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(594, 222);
+            this.label13.Location = new System.Drawing.Point(629, 222);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 24);
             this.label13.TabIndex = 14;
@@ -166,7 +165,7 @@ namespace E_MEET.Windforms.User_sControl
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(594, 322);
+            this.label14.Location = new System.Drawing.Point(629, 322);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(118, 24);
             this.label14.TabIndex = 15;
@@ -224,18 +223,6 @@ namespace E_MEET.Windforms.User_sControl
             this.PictureUser.TabIndex = 0;
             this.PictureUser.TabStop = false;
             // 
-            // PictureBox2
-            // 
-            this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PictureBox2.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
-            this.PictureBox2.Location = new System.Drawing.Point(944, 3);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(47, 38);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 16;
-            this.PictureBox2.TabStop = false;
-            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -246,12 +233,22 @@ namespace E_MEET.Windforms.User_sControl
             this.label15.TabIndex = 17;
             this.label15.Text = "Refresh";
             // 
+            // Button1
+            // 
+            this.Button1.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
+            this.Button1.Location = new System.Drawing.Point(934, 3);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(59, 44);
+            this.Button1.TabIndex = 18;
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // E_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.PictureBox2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -272,7 +269,6 @@ namespace E_MEET.Windforms.User_sControl
             this.Size = new System.Drawing.Size(996, 451);
             this.Load += new System.EventHandler(this.E_Information_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +292,7 @@ namespace E_MEET.Windforms.User_sControl
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox PictureBox2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button Button1;
     }
 }

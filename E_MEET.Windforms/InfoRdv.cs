@@ -24,10 +24,11 @@ namespace E_MEET.Windforms
             TxtMotif.Enabled = false;
             LblNomClient.Text = rendezVous.ClientsNom;
             LblDateDebut.Text = rendezVous.DateDebut.ToString();
-            LblDateFin.Text = rendezVous.DateFin.ToString();
+            LblDateFin.Text = rendezVous.HeureDebut.ToString();
             LblHeureFin.Text = rendezVous.HeureFin.ToString();
             Lblidentifiant.Text = rendezVous.Id;
-            LblPeriodicité.Text = rendezVous.ChoixPeriodicite1;            
+            LblPeriodicité.Text = rendezVous.ChoixPeriodicite1;
+            DateFin.Text = rendezVous.DateFin.ToString();
         }
     }
 }

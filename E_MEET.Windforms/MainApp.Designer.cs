@@ -44,20 +44,17 @@ namespace E_MEET.Windforms
             this.ListAppoint = new Guna.UI2.WinForms.Guna2Button();
             this.Home = new Guna.UI2.WinForms.Guna2Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Button1 = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Navy;
-            this.Panel1.Controls.Add(this.panel3);
+            this.Panel1.Controls.Add(this.Button1);
             this.Panel1.Controls.Add(this.Label4);
             this.Panel1.Controls.Add(this.Label3);
             this.Panel1.Controls.Add(this.Label2);
@@ -327,27 +324,20 @@ namespace E_MEET.Windforms
             this.PanelContainer.Size = new System.Drawing.Size(996, 451);
             this.PanelContainer.TabIndex = 2;
             // 
-            // PictureBox2
+            // Button1
             // 
-            this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PictureBox2.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
-            this.PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(43, 32);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 6;
-            this.PictureBox2.TabStop = false;
-            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.PictureBox2);
-            this.panel3.Location = new System.Drawing.Point(207, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(43, 32);
-            this.panel3.TabIndex = 0;
+            this.Button1.BackColor = System.Drawing.Color.Lavender;
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.ForeColor = System.Drawing.Color.Black;
+            this.Button1.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
+            this.Button1.Location = new System.Drawing.Point(453, 12);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(75, 41);
+            this.Button1.TabIndex = 6;
+            this.Button1.Text = "...";
+            this.Button1.UseVisualStyleBackColor = false;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // MainApp
             // 
@@ -368,8 +358,6 @@ namespace E_MEET.Windforms
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -391,7 +379,6 @@ namespace E_MEET.Windforms
         private System.Windows.Forms.Label Label4;
         private System.Windows.Forms.Label Label3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox PictureBox2;
+        private System.Windows.Forms.Button Button1;
     }
 }

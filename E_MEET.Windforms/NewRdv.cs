@@ -55,12 +55,12 @@ namespace E_MEET.Windforms
                 Plage();
                 var rdv = new RendezVous(Oldclient.Nom,CmdDebut.Text, CmdFin.Text, TrackBar1.Value, ChoixPeriodicite1, ChoixPeriodicite2, ChoixDeFin, DateDebut.Value, DateFin.Value, TxtMotif.Text,TxtId.Text);                
                 RendezvousManager.AddRdv(rdv);
-                Clientmanager.AddClientRdv(Oldclient, rdv);
-                var clt = Clientmanager.AuthenticateClt(Oldclient.Email);
+                Clientmanager.AddClientRdv(Oldclient, rdv);                
+                var clt = Clientmanager.AuthenticateClt(Oldclient.Email);                
                 AddModifyUserClient(clt);
                 Program.curclients.Add(clt);
                 //loading.ShowDialog();
-                MessageBox.Show("Appointment is Added");
+                
             }
             catch (Exception ex)
             {
@@ -80,19 +80,12 @@ namespace E_MEET.Windforms
                 {
                     if (p.Email == clt.Email)
                     {
+                        MessageBox.Show(clt.Prenom);
                         var clt1 = Clientmanager.AuthenticateClt(p.Email);
+                        MessageBox.Show(clt1.Prenom);
                         Program.CurrentUser.DeleteClient(clt1);
                         utilisateurManager.AddUserClient(Program.CurrentUser, clt);
-                    }
-                    else
-                    {
-                        MessageBox.Show
-                        (
-                            "Client is not already exist",
-                            "Error",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                            );
+                        MessageBox.Show("Appointment is Added");
                     }
                 }
             }

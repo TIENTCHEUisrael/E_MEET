@@ -3,14 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_MEET.DAL
 {
     public class BaseRepository<T>
     {
-        protected readonly string Path = $"JSON/{typeof(T).Name}.json";
+        protected readonly string Path = $"MYJSON/{typeof(T).Name}.json";
         protected List<T> Datas;
         private Serializer<List<T>> Serialiser;
         public BaseRepository()

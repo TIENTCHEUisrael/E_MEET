@@ -31,6 +31,8 @@ namespace E_MEET.Windforms.User_sControl
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListView1 = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nom1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,9 +43,8 @@ namespace E_MEET.Windforms.User_sControl
             this.Periodicite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Motif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Contact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Client1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,24 @@ namespace E_MEET.Windforms.User_sControl
             this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(138, 48);
+            // 
+            // informationToolStripMenuItem
+            // 
+            this.informationToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.informationToolStripMenuItem.Image = global::E_MEET.Windforms.Properties.Resources.icons8_view_details_32;
+            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.informationToolStripMenuItem.Text = "Information";
+            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.editToolStripMenuItem.Image = global::E_MEET.Windforms.Properties.Resources.icons8_edit_32;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // ListView1
             // 
@@ -70,7 +89,8 @@ namespace E_MEET.Windforms.User_sControl
             this.Temps,
             this.Periodicite,
             this.Motif,
-            this.Contact});
+            this.Contact,
+            this.Client1});
             this.ListView1.ContextMenuStrip = this.contextMenuStrip1;
             this.ListView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,24 +150,6 @@ namespace E_MEET.Windforms.User_sControl
             this.Contact.Text = "Contact Client";
             this.Contact.Width = 111;
             // 
-            // informationToolStripMenuItem
-            // 
-            this.informationToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.informationToolStripMenuItem.Image = global::E_MEET.Windforms.Properties.Resources.icons8_view_details_32;
-            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.informationToolStripMenuItem.Text = "Information";
-            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.editToolStripMenuItem.Image = global::E_MEET.Windforms.Properties.Resources.icons8_edit_32;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
             // PictureBox2
             // 
             this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -159,6 +161,10 @@ namespace E_MEET.Windforms.User_sControl
             this.PictureBox2.TabIndex = 17;
             this.PictureBox2.TabStop = false;
             this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // Client1
+            // 
+            this.Client1.Text = "ClientPrenom";
             // 
             // E_ListAppoint
             // 
@@ -190,5 +196,6 @@ namespace E_MEET.Windforms.User_sControl
         private System.Windows.Forms.ColumnHeader Motif;
         private System.Windows.Forms.ColumnHeader Contact;
         private System.Windows.Forms.PictureBox PictureBox2;
+        private System.Windows.Forms.ColumnHeader Client1;
     }
 }

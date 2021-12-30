@@ -30,9 +30,9 @@ namespace E_MEET.Windforms.User_sControl
             Label7.Text = Program.CurrentUser.Localisation;
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            E_Information_Load(sender,e);
+            E_Information_Load(sender, e);
         }
     }
 }

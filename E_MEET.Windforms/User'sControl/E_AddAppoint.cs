@@ -73,8 +73,16 @@ namespace E_MEET.Windforms.User_sControl
         {
 
         }
+        private void ListView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (ListView1.SelectedItems.Count == 0)
+                return;
+            var clt = ListView1.SelectedItems[0].Tag as Client;
+            var form = new SetClient(clt);
+            form.ShowDialog();
+        }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             E_AddAppoint_Load(sender, e);
         }

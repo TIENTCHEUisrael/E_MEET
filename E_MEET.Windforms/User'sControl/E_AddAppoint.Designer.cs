@@ -39,8 +39,7 @@ namespace E_MEET.Windforms.User_sControl
             this.Contact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Sexe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Loalisation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            this.Button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Mybutton3
@@ -125,6 +124,7 @@ namespace E_MEET.Windforms.User_sControl
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
             this.ListView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged_1);
+            this.ListView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListView1_MouseDoubleClick);
             // 
             // Nom
             // 
@@ -156,24 +156,22 @@ namespace E_MEET.Windforms.User_sControl
             this.Loalisation.Text = "Localisation";
             this.Loalisation.Width = 169;
             // 
-            // PictureBox2
+            // Button1
             // 
-            this.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictureBox2.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
-            this.PictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(48, 54);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox2.TabIndex = 7;
-            this.PictureBox2.TabStop = false;
-            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.Image = global::E_MEET.Windforms.Properties.Resources.icons8_refresh_32;
+            this.Button1.Location = new System.Drawing.Point(3, 3);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(75, 40);
+            this.Button1.TabIndex = 5;
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // E_AddAppoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PictureBox2);
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.ListView1);
             this.Controls.Add(this.Mybutton3);
             this.Controls.Add(this.Mybutton2);
@@ -181,7 +179,6 @@ namespace E_MEET.Windforms.User_sControl
             this.Name = "E_AddAppoint";
             this.Size = new System.Drawing.Size(996, 451);
             this.Load += new System.EventHandler(this.E_AddAppoint_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,6 +194,6 @@ namespace E_MEET.Windforms.User_sControl
         private System.Windows.Forms.ColumnHeader Contact;
         private System.Windows.Forms.ColumnHeader Sexe;
         private System.Windows.Forms.ColumnHeader Loalisation;
-        private System.Windows.Forms.PictureBox PictureBox2;
+        private System.Windows.Forms.Button Button1;
     }
 }

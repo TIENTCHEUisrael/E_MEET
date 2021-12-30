@@ -99,7 +99,7 @@ namespace E_MEET.Windforms
             AddUserControl(eu);
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             MainApp_Load(sender, e);
         }
