@@ -10,11 +10,15 @@ namespace E_MEET.Windforms.User_sControl
         private Utilisateur EditUser;
         private Client EditClient;
         private UtilisateurManager utilisateurManager;
+        private ClientManager clientManager;
+        private RendezVousManager vousManager;
         public E_AddAppoint()
         {
             InitializeComponent();
             EditUser=new Utilisateur();
             EditClient = new Client();
+            clientManager = new ClientManager();
+            vousManager = new RendezVousManager();
             utilisateurManager = new UtilisateurManager();
         }
 
@@ -62,11 +66,31 @@ namespace E_MEET.Windforms.User_sControl
 
         private void Mybutton2_Click(object sender, EventArgs e)
         {
-            if (ListView1.SelectedItems.Count == 0)
-                return;           
-            var product = ListView1.SelectedItems[0].Tag as Client;
-            utilisateurManager.RemoveUserClient(Program.CurrentUser, product);
-            LoadListView(Program.CurrentUser);
+            try
+            {
+                if (ListView1.SelectedItems.Count == 0)
+                    return;
+                var product = ListView1.SelectedItems[0].Tag as Client;
+                utilisateurManager.RemoveUserClient(Program.CurrentUser, product);
+                var rdv = product.GetRDv();
+                foreach(var i in rdv)
+                {
+                    clientManager.RemoveClientRdv(product,i);
+                    vousManager.DeleteRdv(i);
+                }
+                LoadListView(Program.CurrentUser);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show
+                (
+                    ex.Message,
+                    "Error !!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            
         }
 
         private void ListView1_SelectedIndexChanged_1(object sender, EventArgs e)

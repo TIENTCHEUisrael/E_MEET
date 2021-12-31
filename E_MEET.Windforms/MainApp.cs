@@ -101,7 +101,7 @@ namespace E_MEET.Windforms
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MainApp_Load(sender, e);
+            MainApp_Load(sender,e);            
         }
     }
 }
